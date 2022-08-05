@@ -1,0 +1,15 @@
+{% extends 'layout.html' %}
+{% block content %}
+    <style>
+        .titt {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-style: outset;
+        }
+    </style>
+        <div class="titt">
+            <img src="/{{ row_object.img_url }}" style="width:50%; height:50%"/>
+            <br/>
+        </div>
+{% endblock %}

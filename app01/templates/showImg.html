@@ -1,0 +1,22 @@
+{% extends 'layout.html' %}
+{% block content %}
+    <style>
+        .titt {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-style: outset;
+        }
+    </style>
+    {% for item in imgs %}
+        <div class="titt">
+            <img src="{{ item.img_url.url }}" style="width:50%; height:50%"/>
+            <br/>
+            <td>
+                <a class="btn btn-danger btn-xs" href="detectImg/?nid={{ item.id }}">检测</a>
+                <a class="btn btn-danger btn-xs" href="/{{ item.id }}/queryImg/">检测结果</a>
+                <a class="btn btn-danger btn-xs" href="deleteImg/?nid={{ item.id }}">删除</a>
+            </td>
+        </div>
+    {% endfor %}
+{% endblock %}
